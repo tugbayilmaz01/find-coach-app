@@ -6,10 +6,15 @@
     <slot></slot>
   </router-link>
 </template>
+
 <script>
 export default {
   props: {
-    mode: { type: String, required: false, default: null },
+    mode: {
+      type: String,
+      required: false,
+      default: null,
+    },
     link: {
       type: Boolean,
       required: false,
@@ -23,6 +28,7 @@ export default {
   },
 };
 </script>
+
 <style scoped>
 button,
 a {
