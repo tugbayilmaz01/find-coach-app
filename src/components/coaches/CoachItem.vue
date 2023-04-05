@@ -11,19 +11,20 @@
       ></base-badge>
     </div>
     <div class="actions">
-      <base-button link mode="outline" :to="coachContactLink"
+      <base-button mode="outline" link :to="coachContactLink"
         >Contact</base-button
       >
       <base-button link :to="coachDetailsLink">View Details</base-button>
     </div>
   </li>
 </template>
+
 <script>
 export default {
   props: ['id', 'firstName', 'lastName', 'rate', 'areas'],
   computed: {
     fullName() {
-      return this.firstName + '' + this.lastName;
+      return this.firstName + ' ' + this.lastName;
     },
     coachContactLink() {
       return this.$route.path + '/' + this.id + '/contact'; // /coaches/c1/contact

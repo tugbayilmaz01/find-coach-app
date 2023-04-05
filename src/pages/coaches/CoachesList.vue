@@ -21,15 +21,17 @@
     </base-card>
   </section>
 </template>
+
 <script>
 import CoachItem from '../../components/coaches/CoachItem.vue';
+
 export default {
   components: {
     CoachItem,
   },
   computed: {
     filteredCoaches() {
-      return this.$store.getters['coaches/coaches']; // first coaches - namespace name, second - getter name
+      return this.$store.getters['coaches/coaches'];
     },
     hasCoaches() {
       return this.$store.getters['coaches/hasCoaches'];
@@ -37,6 +39,7 @@ export default {
   },
 };
 </script>
+
 <style scoped>
 ul {
   list-style: none;
